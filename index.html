@@ -1,0 +1,43 @@
+<meta charset="UTF-8" />
+<!doctype html>
+    <head>
+        <title>Kinoct - Watch together</title>
+        <script src="src/js/simplepeer.min.js"></script>
+        <script src="src/js/bundle.js"></script>
+    </head>
+
+    <style>
+        #input{
+            display: none;
+        }
+        button {
+            width: 100px;
+        }
+    </style>
+
+    <body>
+
+    <button type="button"  onclick="send()" >Ping</button>
+        <div style="float:left; background-color: lightgrey; width:19%; border:1px solid black;">
+            <div id="mode">
+                <button type="button" onclick="inst(true)">Host</button>
+                or
+                <button type="button" onclick="inst(false)">Join</button>
+            </div>
+            <br><br>
+            <div id="input">
+                <form>
+                    <input id="out_string" readonly="readonly">
+                    <button type="button" id="copy" onclick="copyText()" >Copy</button>
+                    <br><br>
+                    <input id="in_string">
+                    <button type="submit" id="connect">Connect</button>
+                </form>
+            </div>
+        </div>
+        <div style="float:left; background-color: darkgray;">
+            <video style="display:none;" id="video" controls="false"></video>
+        </div>
+    </body>
+
+</html>
